@@ -12,18 +12,51 @@ html {
 }
 
 /******* HEADER ***********/
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  grid: 20px;
+  grid-template: "header" 200px "main " auto "footer" 200px/auto;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.grid-container {
+  background: rgba(122, 199, 199, 0.664);
+}
+
+header {
+  background: white;
+  grid-area: header;
+}
+
+header img {
+  position: absolute;
+  position: fixed;
+  margin: 15px 0px 0px 80px;
+  z-index: 100;
+}
+
 header nav {
   background: #01bdbe;
   border-bottom: solid 5px #0484ab;
-}
-
-header nav > ul {
+  height: 100px;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
 }
 
 header nav > ul > li {
@@ -38,24 +71,161 @@ header nav > ul > li > a {
   margin-right: 25px;
 }
 
-/******* NAV ***********/
-/*
-nav > ul{
-    display: flex;
-    justify-content: end;
-}
-*/
-/*
-nav > ul > li{
-    display: inline-block;
-    padding: 0 25px;
-  
+header h1 {
+  padding-top: 140px;
+  padding-left: 370px;
+  font-size: 35px;
 }
 
-nav > ul > li > a{
-    text-decoration: none;
-    color: $color_letter;
-    font-size: 20px;
-    margin-right: 25px;
-}*/
+main {
+  grid-area: main;
+}
+
+main .section_1 {
+  background: #313131;
+  /*padding-top: 120px;*/
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .section_1 img {
+  height: 400px;
+}
+
+main .section_1 > div > p {
+  background: #0e0e0e;
+  color: white;
+  height: 200px;
+  width: 320px;
+}
+
+main .section_1 > div > h2 {
+  text-align: end;
+  color: white;
+}
+
+main .section_2 {
+  background: #ff577e;
+  /*padding-top: 120px;*/
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .section_2 img {
+  height: 400px;
+}
+
+main .section_2 > div > p {
+  background: #702134;
+  color: white;
+  height: 200px;
+  width: 320px;
+}
+
+main .section_2 > div > h2 {
+  text-align: start;
+  color: white;
+}
+
+main .section_3 {
+  background: #fad431;
+  /*padding-top: 120px;*/
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .section_3 img {
+  height: 400px;
+}
+
+main .section_3 > div > p {
+  background: #68560c;
+  color: white;
+  height: 200px;
+  width: 320px;
+}
+
+main .section_3 > div > h2 {
+  text-align: end;
+  color: white;
+}
+
+main .section_4 {
+  background: #ff642c;
+  /*padding-top: 120px;*/
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .section_4 img {
+  height: 400px;
+}
+
+main .section_4 > div > p {
+  background: #6d270e;
+  color: white;
+  height: 200px;
+  width: 320px;
+}
+
+main .section_4 > div > h2 {
+  text-align: start;
+  color: white;
+}
+
+footer {
+  grid-area: footer;
+  background: #313131;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*
+@media only screen and (max-width: 600px) {...}
+
+
+@media only screen and (min-width: 600px) {...}
+
+
+@media only screen and (min-width: 768px) {...}
+
+
+@media only screen and (min-width: 992px) {...}
+
+@media only screen and (min-width: 1200px) {
+
+}
+*/
 /*# sourceMappingURL=styles.css.map */
