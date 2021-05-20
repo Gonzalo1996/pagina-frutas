@@ -1,0 +1,73 @@
+/******* VARIABLES ***********/
+$color_letter:rgb(255, 255, 255);
+$color_nav: rgb(1, 189, 190);
+$color_nav_line: rgb(4, 132, 171);
+$color_sandia: rgb(49, 49, 49);
+$color_sandia_text: rgb(14,14,14);
+$color_frutilla: rgb(255,87,126);
+$color_frutilla_text: rgb(112,33,52);
+$color_pera: rgb(250,212,49);
+$color_pera_text: rgb(104,86,12);
+$color_banana: rgb(255,100,44);
+$color_banana_text: rgb(109,39,14);
+
+/******* HTML ***********/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/******* HEADER ***********/
+header{
+    nav{
+        background: $color_nav;
+        border-bottom: solid 5px $color_nav_line;
+        
+        > ul{
+            display: flex;
+            justify-content: end;
+            
+            > li{
+                display: inline-block;
+                padding: 0 25px; 
+
+                > a{
+                    text-decoration: none;
+                    color: $color_letter;
+                    font-size: 20px;
+                    margin-right: 25px;
+                }
+            }
+        }
+
+    }    
+
+
+}
+
+
+/******* NAV ***********/
+/*
+nav > ul{
+    display: flex;
+    justify-content: end;
+}
+*/
+/*
+nav > ul > li{
+    display: inline-block;
+    padding: 0 25px;
+  
+}
+
+nav > ul > li > a{
+    text-decoration: none;
+    color: $color_letter;
+    font-size: 20px;
+    margin-right: 25px;
+}*/
