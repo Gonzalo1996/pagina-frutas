@@ -11,6 +11,35 @@ $color_pera_text: rgb(104,86,12);
 $color_banana: rgb(255,100,44);
 $color_banana_text: rgb(109,39,14);
 
+
+@mixin sectionFruts($bgColor_section,$bgColor_p,$color_p_letter,$direction) {
+   
+        background: $bgColor_section;
+        height: 60vh;
+        display: flex;
+        flex-direction: $direction;
+        justify-content: space-around;
+        
+        img{
+            height: 400px;
+        }
+        > div {
+
+            >p{
+                background: $bgColor_p;
+                color: $color_p_letter;
+                height: 200px;
+                width: 320px;
+                text-align: justify;
+                padding-top: 50px;
+            }
+            > h2{
+                text-align: end;
+                color: $color_p_letter;
+            }
+        }   
+}
+
 /******* HTML ***********/
 *{
     margin: 0;
@@ -94,106 +123,20 @@ main{
     grid-area: main;
 
     .section_1{
-        background: $color_sandia;
-        /*padding-top: 120px;*/
-        height: 60vh;
-        display: flex;
-        justify-content: space-around;
-        
-        img{
-            height: 400px;
-        }
-        > div {
-
-            >p{
-                background: $color_sandia_text;
-                color: $color_letter;
-                height: 200px;
-                width: 320px;
-            }
-            > h2{
-                text-align: end;
-                color: $color_letter;
-            }
-        }
+        @include sectionFruts($color_sandia,$color_sandia_text,$color_letter,row)
     }
-
-    .section_2{
-        background: $color_frutilla;
-        /*padding-top: 120px;*/
-        height: 60vh;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-around;
-        
-        img{
-            height: 400px;
-        }
-        > div {
-
-            >p{
-                background: $color_frutilla_text;
-                color: $color_letter;
-                height: 200px;
-                width: 320px;
-            }
-            > h2{
-                text-align: start;
-                color: $color_letter;
-            }
-        }
-    }
-
-        .section_3{
-            background: $color_pera;
-            /*padding-top: 120px;*/
-            height: 60vh;
-            display: flex;
-            justify-content: space-around;
-            
-            img{
-                height: 400px;
-            }
-            > div {
     
-                >p{
-                    background: $color_pera_text;
-                    color: $color_letter;
-                    height: 200px;
-                    width: 320px;
-                }
-                > h2{
-                    text-align: end;
-                    color: $color_letter;
-                }
-            }
-        }
-
-            .section_4{
-                background: $color_banana;
-                /*padding-top: 120px;*/
-                height: 60vh;
-                display: flex;
-                flex-direction: row-reverse;
-                justify-content: space-around;
-                
-                img{
-                    height: 400px;
-                }
-                > div {
-        
-                    >p{
-                        background: $color_banana_text;
-                        color: $color_letter;
-                        height: 200px;
-                        width: 320px;
-                    }
-                    > h2{
-                        text-align: start;
-                        color: $color_letter;
-                    }
-                }
-            }
+    .section_2{
+        @include sectionFruts($color_frutilla,$color_frutilla_text,$color_letter,row-reverse)
+    }
+    
+    .section_3{
+        @include sectionFruts($color_pera,$color_pera_text,$color_letter,row)
+    }
+    
+    .section_4{
+        @include sectionFruts($color_banana,$color_banana_text,$color_letter,row-reverse)
+    }
 }
 
 footer{
@@ -206,18 +149,16 @@ footer{
 }
 
 /*
-@media only screen and (max-width: 600px) {...}
+@media only screen and (max-width: 600px) {}
 
 
-@media only screen and (min-width: 600px) {...}
+@media only screen and (min-width: 600px) {}
 
 
-@media only screen and (min-width: 768px) {...}
+@media only screen and (min-width: 768px) {}
 
 
-@media only screen and (min-width: 992px) {...}
+@media only screen and (min-width: 992px) {}
 
-@media only screen and (min-width: 1200px) {
-
-}
+@media only screen and (min-width: 1200px) {}
 */

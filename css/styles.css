@@ -83,11 +83,14 @@ main {
 
 main .section_1 {
   background: #313131;
-  /*padding-top: 120px;*/
   height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
@@ -101,6 +104,8 @@ main .section_1 > div > p {
   color: white;
   height: 200px;
   width: 320px;
+  text-align: justify;
+  padding-top: 50px;
 }
 
 main .section_1 > div > h2 {
@@ -110,7 +115,6 @@ main .section_1 > div > h2 {
 
 main .section_2 {
   background: #ff577e;
-  /*padding-top: 120px;*/
   height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -132,20 +136,25 @@ main .section_2 > div > p {
   color: white;
   height: 200px;
   width: 320px;
+  text-align: justify;
+  padding-top: 50px;
 }
 
 main .section_2 > div > h2 {
-  text-align: start;
+  text-align: end;
   color: white;
 }
 
 main .section_3 {
   background: #fad431;
-  /*padding-top: 120px;*/
   height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
@@ -159,6 +168,8 @@ main .section_3 > div > p {
   color: white;
   height: 200px;
   width: 320px;
+  text-align: justify;
+  padding-top: 50px;
 }
 
 main .section_3 > div > h2 {
@@ -168,7 +179,6 @@ main .section_3 > div > h2 {
 
 main .section_4 {
   background: #ff642c;
-  /*padding-top: 120px;*/
   height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,10 +200,12 @@ main .section_4 > div > p {
   color: white;
   height: 200px;
   width: 320px;
+  text-align: justify;
+  padding-top: 50px;
 }
 
 main .section_4 > div > h2 {
-  text-align: start;
+  text-align: end;
   color: white;
 }
 
@@ -213,19 +225,17 @@ footer {
 }
 
 /*
-@media only screen and (max-width: 600px) {...}
+@media only screen and (max-width: 600px) {}
 
 
-@media only screen and (min-width: 600px) {...}
+@media only screen and (min-width: 600px) {}
 
 
-@media only screen and (min-width: 768px) {...}
+@media only screen and (min-width: 768px) {}
 
 
-@media only screen and (min-width: 992px) {...}
+@media only screen and (min-width: 992px) {}
 
-@media only screen and (min-width: 1200px) {
-
-}
+@media only screen and (min-width: 1200px) {}
 */
 /*# sourceMappingURL=styles.css.map */
