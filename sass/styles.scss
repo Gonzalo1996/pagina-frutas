@@ -11,7 +11,6 @@ $color_pera_text: rgb(104,86,12);
 $color_banana: rgb(255,100,44);
 $color_banana_text: rgb(109,39,14);
 
-
 @mixin sectionFruts($bgColor_section,$bgColor_p,$color_p_letter,$direction) {
    
         background: $bgColor_section;
@@ -19,7 +18,8 @@ $color_banana_text: rgb(109,39,14);
         display: flex;
         flex-direction: $direction;
         justify-content: space-around;
-        
+        padding-top: 105px;
+    
         img{
             height: 400px;
         }
@@ -40,6 +40,47 @@ $color_banana_text: rgb(109,39,14);
         }   
 }
 
+
+@mixin sectionFrut($bgColor_section,$bgColor_p,$color_p_letter,$direction) {
+   
+    background: $bgColor_section;
+    flex-direction: $direction;
+
+    > div {
+
+        >p{
+            background: $bgColor_p;
+            color: $color_p_letter;
+        }
+        > h2{
+            color: $color_p_letter;
+        }
+    }   
+}
+
+%sec{
+        height: 60vh;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 105px;
+    
+        img{
+            height: 400px;
+        }
+        > div {
+
+            >p{
+                height: 200px;
+                width: 320px;
+                text-align: justify;
+                padding-top: 50px;
+            }
+            > h2{
+                text-align: end;
+            }
+        }   
+}
+
 /******* HTML ***********/
 *{
     margin: 0;
@@ -49,6 +90,7 @@ $color_banana_text: rgb(109,39,14);
 
 html{
     scroll-behavior: smooth;
+  
 }
 
 /******* HEADER ***********/
@@ -89,11 +131,13 @@ header{
         max-width: 1000px;
         margin: auto;
         position: fixed;
+        top: 0;
         left: 0;
         right: 0;     
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
+        
 
         > ul{
 
@@ -123,19 +167,23 @@ main{
     grid-area: main;
 
     .section_1{
-        @include sectionFruts($color_sandia,$color_sandia_text,$color_letter,row)
+        @extend %sec;
+        @include sectionFrut($color_sandia,$color_sandia_text,$color_letter,row)
     }
     
     .section_2{
-        @include sectionFruts($color_frutilla,$color_frutilla_text,$color_letter,row-reverse)
+        @extend %sec;
+        @include sectionFrut($color_frutilla,$color_frutilla_text,$color_letter,row-reverse)
     }
     
     .section_3{
-        @include sectionFruts($color_pera,$color_pera_text,$color_letter,row)
+        @extend %sec;
+        @include sectionFrut($color_pera,$color_pera_text,$color_letter,row)
     }
     
     .section_4{
-        @include sectionFruts($color_banana,$color_banana_text,$color_letter,row-reverse)
+        @extend %sec;
+        @include sectionFrut($color_banana,$color_banana_text,$color_letter,row-reverse)
     }
 }
 
@@ -148,17 +196,94 @@ footer{
     align-items: center;
 }
 
-/*
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 730px) {
+    main{
+        .section_1,.section_2,.section_3,.section_4{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0px;
+
+            img{
+                width: 400px;
+                height: 300px;
+            }
+            > div{
+                >p{
+                    width: 400px;
+                    height: 180px;
+                }
+                > h2{
+                    text-align: center;
+                }
+            }
+          }
+          
+    }
+
+    header{
+        h1{
+            padding-left: 230px;
+        }
+        img{
+            display: none;
+        }
+        nav{
+            justify-content: center;
+        }
+    }
+}
 
 
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 731px) and (max-width: 781px) {
+    header{
+        
+        h1{
+            padding-top: 140px;
+            padding-left: 260px;
+            font-size: 35px;
+        }
+    }
+
+    main{
+        .section_1,.section_2,.section_3,.section_4{
+           
+
+            img{
+                height: 260px;
+            }
+          }
+    }
+}
 
 
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 782px) and (max-width: 840px) {
 
 
-@media only screen and (min-width: 992px) {}
+    header{
+        
+        h1{
+            padding-top: 140px;
+            padding-left: 280px;
+            font-size: 35px;
+        }
+    }
 
-@media only screen and (min-width: 1200px) {}
-*/
+    main{
+        .section_1,.section_2,.section_3,.section_4{
+
+
+            img{
+                height: 290px;
+            }
+          }
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+
+
+
+}
